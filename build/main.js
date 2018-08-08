@@ -921,7 +921,10 @@ class AirApi {
         minPrice,
         maxPrice,
         minPicCount,
-        sortDirection
+        sortDirection,
+        checkin,
+        checkout,
+        roomTypes
     } = {}) {
         const options = this.buildOptions({
             token: 'public',
@@ -940,7 +943,10 @@ class AirApi {
                 price_min: minPrice,
                 price_max: maxPrice,
                 min_num_pic_urls: minPicCount,
-                sort: sortDirection
+                sort: sortDirection,
+                checkin,
+                checkout,
+                room_types: roomTypes
             }
         });
         try {
